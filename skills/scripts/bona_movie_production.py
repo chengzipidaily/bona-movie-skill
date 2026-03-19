@@ -210,6 +210,7 @@ class BonaClient:
         return {
             "Content-Type": "application/json",
             "Authorization": f"Bearer {self._get_access_token()}",
+            "Clientid": "e5cd7e4891bf95d1d19206ce24a7b32e",
         }
 
     def create_image_task(self, payload: Dict[str, Any]) -> Dict[str, Any]:
