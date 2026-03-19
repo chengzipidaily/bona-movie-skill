@@ -4,7 +4,7 @@ description: "Bona Movie Production is Bona Group's film-grade production skill.
 license: MIT
 compatibility: "需要 Python 3.9+，依赖 requests。默认请求 https://api.bonanai.com/v1/tencent 。"
 metadata:
-  author: codex
+  author: chengzipi
   version: "1.0.0"
   python-version: ">=3.9"
   dependencies:
