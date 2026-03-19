@@ -2,7 +2,7 @@
 name: bona-movie-production
 description: "Bona Movie Production is Bona Group's film-grade production skill. It covers image generation, image editing, and video generation, using Nano Banana 2 and Nano Banana Pro for images, and Seedance plus generate_video_kling_v3 for videos."
 license: MIT
-compatibility: "需要 Python 3.9+，依赖 requests。默认请求 https://api.bonanai.com/v1/tencent 。"
+compatibility: "需要 Python 3.9+，依赖 requests。"
 metadata:
   author: chengzipi
   version: "1.0.0"
