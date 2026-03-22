@@ -660,54 +660,9 @@ python skills/bona-movie-production/scripts/bona_movie_production.py create-vide
   --resolution 720P
 ```
 
-## 十二、多镜头视频
 
-### 1. `generate_video_kling_v3`
 
-适合：
-
-- 分镜式短片
-- 一条任务内多个 shot
-- 预告片节奏剪辑
-
-参数规则：
-
-- 最多 6 个 shot
-- 每个 shot 要有 `index`、`prompt`、`duration`
-- 所有 shot 的时长总和必须等于外层 `duration`
-
-Prompt 写法：
-
-- 多镜头时优先用 `shot_prompts`
-- 每个 shot 单独写清场景、动作、镜头
-
-schema 示例：
-
-```json
-{
-  "tool_name": "generate_video_kling_v3",
-  "video_name": "multi-shot-trailer",
-  "prompt": "Trailer sequence",
-  "aspect_ratio": "16:9",
-  "duration": 5,
-  "mode": "pro",
-  "sound": "on",
-  "shot_prompts": [
-    {
-      "index": 0,
-      "prompt": "A dark cinema corridor, camera pushes forward, tense ambience",
-      "duration": "2"
-    },
-    {
-      "index": 1,
-      "prompt": "The heroine turns back suddenly, dramatic backlight, cloth movement",
-      "duration": "3"
-    }
-  ]
-}
-```
-
-## 十三、查询任务
+## 十二、查询任务
 
 图片查询：
 
