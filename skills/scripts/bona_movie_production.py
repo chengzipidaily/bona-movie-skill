@@ -14,9 +14,10 @@ import requests
 DEFAULT_BASE_URL = "https://create.bonanai.com/api/ai-tool/v1/tencent"
 DEFAULT_LOGIN_URL = "https://create.bonanai.com/api/auth/loginByAccessKey"
 DEFAULT_TIMEOUT = 600
-PROCESSING_STATUSES = {0, "0", "submitted", "queued", "queueing", "pending", "processing", "running", "in_progress"}
-SUCCESS_STATUSES = {1, "1", "success", "succeeded", "finished", "completed", "done"}
-FAILED_STATUSES = {2, "2", 3, "3", "failed", "error", "cancelled"}
+# Bona task statuses: 1 = generating, 9 = completed, -1 = failed.
+PROCESSING_STATUSES = {0, "0", 1, "1", "submitted", "queued", "queueing", "pending", "processing", "running", "in_progress"}
+SUCCESS_STATUSES = {9, "9", "success", "succeeded", "finished", "completed", "done"}
+FAILED_STATUSES = {-1, "-1", 2, "2", 3, "3", "failed", "error", "cancelled"}
 
 
 @dataclass
@@ -719,3 +720,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
